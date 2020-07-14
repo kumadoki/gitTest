@@ -39,7 +39,6 @@ public class customController {
 	@Inject
 	fileAttachService fileattachService;
 	@javax.annotation.Resource
-	String tempFolder ; //init  = "D:\\upload\\temp"  이거 안쓸거같다.
 	String UploadPath = "D:\\upload";
 
 	Logger logger = LoggerFactory.getLogger(this.getClass());
@@ -58,9 +57,7 @@ public class customController {
 			String str = mapper.writeValueAsString(list);
 			response.setCharacterEncoding("utf-8");
 			response.getWriter().print(str);
-//			response.flushBuffer(); // what is this..?
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		};
 	}
@@ -88,15 +85,14 @@ public class customController {
 	                    File uploadPath = new File(UploadPath, uploadFolderPath); // D:\\upload\\yyyy\\MM\\dd
 			    		if (uploadPath.exists() == false) {
 			    			uploadPath.mkdirs();
-			    		} // make yyyy\MM\dd folder
+			    		} // make yyyy\MM\dd directory
 	    		organizedfilePath = uploadPath + "\\" + uploadFileName;
 	    		logger.info("organizedfilePath:: {}",organizedfilePath);
                 outputStream = new FileOutputStream(organizedfilePath);
                 int readByte = 0;
-                byte[] buffer = new byte[8192]; // 이게 뭔지 모르겠음.
+                byte[] buffer = new byte[8192];
                 while ((readByte = inputStream.read(buffer, 0, 8120)) != -1) {
-
-                    outputStream.write(buffer, 0, readByte); //파일 생성 !
+                    outputStream.write(buffer, 0, readByte);
                 }
 	        	fileAttachVO.setUuid(randomeUUID.toString());
 	        	fileAttachVO.setUploadPath(uploadFolderPath.toString());
@@ -107,7 +103,6 @@ public class customController {
 				response.getWriter().print(str);
 	                }
 	            } catch (Exception e) {
-	                // TODO: handle exception
 	                e.printStackTrace();
 	            } finally {
 	                outputStream.close();
@@ -115,19 +110,16 @@ public class customController {
 	            }
         	}
         }
-          //mav.setViewName("/jsp/testpage");
-//        return mav;
     }
 
 	@RequestMapping(value = "/downloadAction")
 	public void downloadFile( String fileName, HttpServletRequest request, HttpServletResponse response) {
-		logger.info("downloadAction!");
 		logger.info("fileName is :: {}",fileName);
 		int idx = fileName.lastIndexOf("\\");
 		String filePath = UploadPath + "\\" + fileName.substring(0,idx);  // 파일이 업로드된 경로. db에서의 UploadPath
 		String fileUuid = fileName.substring(idx+1); // uuid가 포함된 파일 이름.
 		File file = new File(filePath, fileUuid);
-		String userAgent = request.getHeader("User-Agent"); // 브라우저 타입 파악
+		String userAgent = request.getHeader("User-Agent");
 		Resource resource = new FileSystemResource(UploadPath+ "\\" + fileName);
 		if(resource.exists() == false) {
 			 // 파일이 서버의 경로에 존재하지 않을 경우.
@@ -172,8 +164,8 @@ public class customController {
 		        byte[] data=new byte[2048];
 		        int input=0;
 		        while((input=bis.read(data))!=-1){
-		         bos.write(data,0,input);
-		         bos.flush();
+					bos.write(data,0,input);
+					bos.flush();
 		        }
 
 			} catch (Exception e) {
@@ -193,11 +185,11 @@ public class customController {
 
 	@RequestMapping(value = "/deleteFileAction")
 	public void deleteFile(String path, HttpServletResponse response) {
-		logger.info("deleteFile Action ");
+		logger.info("deleteFile Action");
 		String temp = path.substring(path.lastIndexOf("\\")+1);
 		String folderPath = path.substring(0, path.lastIndexOf("\\"));
 		String[] arrTemp = temp.toString().split("_");
-		String uuid = arrTemp[0]; // 필요한거
+		String uuid = arrTemp[0];
 		String uploadFolder = UploadPath + "\\" + folderPath;
 		File deleteFile = new File(uploadFolder, temp);
 		try {
@@ -216,8 +208,5 @@ public class customController {
 		String str = sdf.format(date);
 		return str.replace("-", File.separator);
 	}
-
 	// 2020 07 13 excel test
-
-
 }

@@ -128,12 +128,6 @@ var deleteFile = function f_deleteFile(StringPath){
 	 }); //$.ajax
 };
 var clickbind = function f_clickbind(){
-	// temporary file delete
-	$('.deleteFile').unbind('click').click(function(event){
-		var clickObj =  $(this).data("path");
-		var parentLi = $(this).parent();
-		tempFileDelete(clickObj, parentLi);
-	});
 	$('#uploadBtn').unbind('click').click(function(event) {
 		console.log("click upload button");
 		fileUpload();
@@ -182,12 +176,10 @@ var doExcelDownloadProcess = function f_doExcelDownloadProcess(){
     f.submit();
 }
 
-
-
 $(document).ready(function(){
     $('input.afile3').MultiFile({
         max: 10, //업로드 최대 파일 갯수 (지정하지 않으면 무한대)
-//        accept: 'jpg|png|gif', //허용할 확장자(지정하지 않으면 모든 확장자 허용)
+//      accept: 'jpg|png|gif', //허용할 확장자(지정하지 않으면 모든 확장자 허용)
         maxfile: 10240, //각 파일 최대 업로드 크기
         maxsize: 20480,  //전체 파일 최대 업로드 크기
         STRING: { //Multi-lingual support : 메시지 수정 가능
@@ -201,7 +193,6 @@ $(document).ready(function(){
         },
         list:"#afile3-list" //파일목록을 출력할 요소 지정가능
     });
-	// 이 리스트를 가공할 순 없나? 나중에 확인이 필요할 거 같음.
 	fileList();
 	eventbind();
 })
