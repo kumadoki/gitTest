@@ -197,6 +197,8 @@ $(document).ready(function(){
 	eventbind();
 	// branch Test add code
 	sssssssssssssssssssssssssssssssssssss
+	// and some conflict test
+	do something you stup..
 })
 </script>
 </html>
