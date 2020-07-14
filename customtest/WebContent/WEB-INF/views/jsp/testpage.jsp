@@ -196,7 +196,7 @@ $(document).ready(function(){
 	fileList();
 	eventbind();
 	// branch Test add code
-	conflict
+	config merge file to sync workSpace
 })
 </script>
 </html>
