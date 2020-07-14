@@ -197,7 +197,7 @@ $(document).ready(function(){
 	eventbind();
 	// branch Test add code
 	
-	another test lineㅍㅌㅊㅍㅋㅌㅊ
+	이젠 되니 ?
 })
 </script>
 </html>
