@@ -196,9 +196,7 @@ $(document).ready(function(){
 	fileList();
 	eventbind();
 	// branch Test add code
-	conflict test ?
-	
-	askjdhvakjsdhfkljh
+	tttetetettajsdjfalfkdjasfkdljast
 })
 </script>
 </html>
