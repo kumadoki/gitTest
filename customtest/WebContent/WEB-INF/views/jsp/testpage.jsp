@@ -195,10 +195,10 @@ $(document).ready(function(){
     });
 	fileList();
 	eventbind();
-	// branch Test add code
-	conflict test ?
 	
-	askjdhvakjsdhfkljh
-})
+	// branch Test add code
+
+	Merge tool Test 
+	
 </script>
 </html>
