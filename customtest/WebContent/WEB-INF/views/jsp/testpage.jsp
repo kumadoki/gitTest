@@ -195,10 +195,8 @@ $(document).ready(function(){
     });
 	fileList();
 	eventbind();
-	
 	// branch Test add code
 
-	Merge tool Test 
-	
+})
 </script>
 </html>
