@@ -72,7 +72,7 @@ var fileUpload = function f_fileUpload(){
 				tempfileletgth = 0;
 				tempList = "";
 				fileList();
-	            alert("성공") ;
+	            alert("success") ;
 			} else {
 				alert("??? error?") ;
 			}
