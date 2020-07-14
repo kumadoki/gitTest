@@ -196,8 +196,6 @@ $(document).ready(function(){
 	fileList();
 	eventbind();
 	// branch Test add code
-	config merge file to sync workSpace
-	// branch Test add code
 	sssssssssssssssssssssssssssssssssssss
 })
 </script>
