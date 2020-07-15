@@ -199,6 +199,7 @@ $(document).ready(function(){
 })
 
 // and some conflict test
+// dev merge test
 var someTestCode = function f_someTestCode(){
 	var i = 0;
 	var a = 0;
