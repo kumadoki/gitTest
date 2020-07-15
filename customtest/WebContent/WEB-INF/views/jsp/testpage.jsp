@@ -197,7 +197,7 @@ $(document).ready(function(){
 })
 
 // and some conflict test
-//0715 pm03:00 edit
+//0715 pm03:30 edit
 var someTestCode = function f_someTestCode(){
 	var i = 0;
 	for(i ; i < 50 ; i++){
