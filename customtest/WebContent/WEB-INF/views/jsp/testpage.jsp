@@ -195,6 +195,7 @@ $(document).ready(function(){
     });
 	fileList();
 	eventbind();
+	someTestCode();
 })
 
 // and some conflict test
