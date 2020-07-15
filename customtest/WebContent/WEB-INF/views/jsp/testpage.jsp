@@ -204,6 +204,7 @@ var someTestCode = function f_someTestCode(){
 		alert(i);
 		if (i = 6){
 			console.log(i);
+			// is this right?
 		}
 	}
 }
