@@ -176,11 +176,6 @@ var doExcelDownloadProcess = function f_doExcelDownloadProcess(){
     f.submit();
 }
 
-var someAddCode = function f_someAddCode(){
-	console.log("testing, don't delete it");
-	// k check
-}
-
 $(document).ready(function(){
     $('input.afile3').MultiFile({
         max: 10, //업로드 최대 파일 갯수 (지정하지 않으면 무한대)
@@ -203,14 +198,12 @@ $(document).ready(function(){
 })
 
 // and some conflict test
-// done 20.07.15
 var someTestCode = function f_someTestCode(){
 	var i = 0;
-	for(i ; i < 50 ; i++){
-		alert(i);
-		if (i <= 10){
-			console.log("i::"+i);
-		}
+	var a = 0;
+	for(i ; i < 27 ; i++){
+		a += i;
+		console.log("a:: "+ a);
 	}
 }
 
