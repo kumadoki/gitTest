@@ -176,6 +176,10 @@ var doExcelDownloadProcess = function f_doExcelDownloadProcess(){
     f.submit();
 }
 
+var someAddCode = function f_someAddCode(){
+	console.log("testing, don't delete it");
+}
+
 $(document).ready(function(){
     $('input.afile3').MultiFile({
         max: 10, //업로드 최대 파일 갯수 (지정하지 않으면 무한대)
