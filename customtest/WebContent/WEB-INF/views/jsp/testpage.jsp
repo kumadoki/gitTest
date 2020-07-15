@@ -205,7 +205,6 @@ var someTestCode = function f_someTestCode(){
 		if (i <= 10){
 			console.log(i);
 			//yep. this is right
-			// is this right?
 		}
 	}
 }
