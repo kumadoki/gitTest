@@ -178,6 +178,7 @@ var doExcelDownloadProcess = function f_doExcelDownloadProcess(){
 
 var someAddCode = function f_someAddCode(){
 	console.log("testing, don't delete it");
+	// k check
 }
 
 $(document).ready(function(){
