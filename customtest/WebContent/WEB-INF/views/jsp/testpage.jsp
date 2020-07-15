@@ -200,10 +200,12 @@ $(document).ready(function(){
 // and some conflict test
 var someTestCode = function f_someTestCode(){
 	var i = 0;
-	for(i ; i < 10 ; i++){
+	for(i ; i < 20 ; i++){
 		alert(i);
-		if (i = 6){
+		if (i <= 10){
 			console.log(i);
+			//yep. this is right
+			// is this right?
 		}
 	}
 }
