@@ -195,14 +195,18 @@ $(document).ready(function(){
     });
 	fileList();
 	eventbind();
-	
-	// and some conflict test
-	
-	ohh that is cool, admit it.
-
-	
-	
-	clean base branch
 })
+
+// and some conflict test
+var someTestCode = function f_someTestCode(){
+	var i = 0;
+	for(i ; i < 10 ; i++){
+		alert(i);
+		if (i = 6){
+			console.log(i);
+		}
+	}
+}
+
 </script>
 </html>
