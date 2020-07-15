@@ -195,8 +195,12 @@ $(document).ready(function(){
     });
 	fileList();
 	eventbind();
-	// and some conflict test
-	do something you
+	
+	
+	clean base branch
+	
+	
+	
 })
 </script>
 </html>
